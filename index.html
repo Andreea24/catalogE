@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="container">
+    <div id="lista_elevi_wrapper">
+        <h1>Lista elevi</h1>
+        <hr>
+            <form action="">
+                <input name="nume" id="nume" type="text" onkeypress="enterElev(this,event)">
+                <input type="button" class="btn" value="Adauga elev" onclick="adaugaElevi(this,event);" />
+            </form>
+        <br/>
+            <div class="btn_sort">
+                <button class="sort" onclick="sort_asc_medie()">Media <u>ascendent</u></button> 
+                <button class="sort" onclick="sort_desc_medie()">Media <u>descendent</u></button>
+                <br/>
+            </div>
+            <table id="listaElevi">
+                <tbody></tbody>
+            </table>
+    </div> 
+    <div id="note_elev_wrapper">
+            <button id="btnNote1" onclick="ascunde();"><span>Ascunde notele</span></button> <br /> <br />
+            <div>
+                <h2>Note elev:&nbsp;
+                <span id="numeElev"></span>
+                </h2>
+            </div>
+            <form  style="padding-left:1em;">
+                    <input name="nota" id="nota" type="number"  onkeypress="enterNota(this,event)">
+                    <input type="button" class="btn2" value="Adauga nota" onclick="adaugaNote(); medie[index]=media_generala(); drawCatalog();"/>
+            </form>
+        <br/>
+            <div class="btn_sort">
+                    <button class="sort" onclick="sort_asc_note()" style="border:1px solid black;">Note <u>ascendent</u></button> 
+                    <button class="sort" onclick="sort_desc_note()"  style="border:1px solid black;">Note <u>descendent</u></button>
+                    <br/>
+            </div>
+            <table id="listaNote">
+                    <tbody></tbody>
+            </table>
+    </div>
+</div>
+</body>
+</html>
